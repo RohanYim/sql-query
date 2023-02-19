@@ -1,3 +1,8 @@
+select first_name,last_name,id,grade
+from students
+join grades on students.id=grades.student_id
+where grades.school_code="E" and grades.dept_id="81" and course_code="330S";
+
 +------------+-----------+-----+--------+
 | first_name | last_name | id  | grade  |
 +------------+-----------+-----+--------+

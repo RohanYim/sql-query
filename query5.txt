@@ -1,3 +1,9 @@
+SELECT s.id, s.email_address, AVG(g.grade) as average_grade
+FROM students s
+JOIN grades g ON s.id = g.student_id
+WHERE s.first_name = 'Jack' and s.last_name = 'Johnson'
+GROUP BY s.id
+
 +-----+------------------------------+---------------+
 | id  | email_address                | average_grade |
 +-----+------------------------------+---------------+
